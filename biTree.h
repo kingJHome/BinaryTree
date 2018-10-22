@@ -5,15 +5,15 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef void (*VisitNode)(BiTree*);
-
 typedef struct bitree{
 	char flag;
 	struct bitree *parent,*lchild,*rchild;
 }BiTree;
 
+typedef void (*VisitNode)(BiTree*);
+
 //通过文件构建二叉树
-void CreatBiTree(BiTree **header,char *filename);
+void CreateBiTree(BiTree **header,char *content);
 
 //获取二叉树深度
 int DeepBiTree(BiTree *bt);

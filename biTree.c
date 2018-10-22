@@ -1,7 +1,15 @@
 #include "biTree.h"
 
 //通过文件构建二叉树
-void CreatBiTree(BiTree **header,char *filename){
+void CreateBiTree(BiTree **header,char *content){
+	if( *header == NULL ){
+		*header = (BiTree*)malloc(sizeof(BiTree));
+		BiTree *curHeader = *header;
+
+		if( curHeader ){
+			size_t 
+		}
+	}
 }
 
 //获取二叉树深度
