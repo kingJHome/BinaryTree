@@ -9,7 +9,7 @@ char* removeNewLineFlag(char *content);
 void visitBTree(BiTree *node);
 
 int main(int argc,char *argv[]){
-	FILE *fp = fopen(filename, "r");
+	FILE *fp = fopen("bitree.txt", "r");
 	
 	if( fp ){
 		int btDeep = 0;
@@ -19,6 +19,7 @@ int main(int argc,char *argv[]){
 		content = removeNewLineFlag(content);
 		CreateBiTree(&header, content);
 		VisitBiTree(header, visitBTree);
+		printf("\n");
 		//获取二叉树深度
 		//btDeep = DeepBiTree(header);
 		//printf("二叉树深度为%d\n", btDeep);
