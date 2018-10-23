@@ -21,8 +21,8 @@ int main(int argc,char *argv[]){
 		VisitBiTree(header, visitBTree);
 		printf("\n");
 		//获取二叉树深度
-		//btDeep = DeepBiTree(header);
-		//printf("二叉树深度为%d\n", btDeep);
+		btDeep = DeepBiTree(header);
+		printf("二叉树深度为%d\n", btDeep);
 	}
 
 	return 0;

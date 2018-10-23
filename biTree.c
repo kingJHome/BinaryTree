@@ -53,20 +53,28 @@ void CreateBiTree(BiTree **header,char *content){
 	}
 }
 
-//获取二叉树深度
+//获取树结点数目
+int GetTreeNodeNum(BiTree *bt){
+	if( bt ){
+		int lnum = GetTreeNodeNum(bt->lchild),
+			rnum = GetTreeNodeNum(bt->rchild);
+
+		return (1 + lnum + rnum);
+	}else{
+		return 0;
+	}
+}
+
+//获取二叉树深度(递归)
 int DeepBiTree(BiTree *bt){
-}
+	if( bt ){
+		int lnum = DeepBiTree(bt->lchild),
+			rnum = DeepBiTree(bt->rchild);
 
-//获取二叉树上的某个结点
-BiTree* GetANode(BiTree *header,char flag){
-}
-
-//插入结点
-void InsertANode(BiTree *header,char flag){
-}
-
-//删除某个结点
-BiTree* DeleteANode(BiTree *header,char flag){
+		return (1 + Maxi(lnum,rnum));
+	}else{
+		return 0;
+	}	
 }
 
 //访问二叉树(中序遍历)
